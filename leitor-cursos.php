@@ -49,3 +49,5 @@ echo "\n";
 
 //Lê um arquivo e transforma em um array
 var_dump(file('lista-cursos.txt'));
+//file_get_contents devolve todo o conteúdo o arquivo como uma string. 
+//file devolve cada linha do arquivo como um item em um array
