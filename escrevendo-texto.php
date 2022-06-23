@@ -26,3 +26,12 @@ fwrite($arquivo, $curso);
 
 fclose($arquivo);
 
+//Forma mais fácil de escrever no arquivo
+file_put_contents('cursos-php.txt', $curso);
+
+$curso = "\nTeste";
+//3º parâmetro são flags = informações a mais
+    //FILE_APPEND = ADICIONA no final
+    //Adicionar mais flags:  flag | flag
+file_put_contents('cursos-php.txt', $curso, FILE_APPEND);
+

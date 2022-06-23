@@ -1,2 +1,3 @@
-PHP Composer: Dependências, Autoload e Publicação
+
 PHP Composer: Curso 2
+Teste
