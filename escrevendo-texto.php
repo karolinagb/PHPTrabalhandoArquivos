@@ -1,7 +1,9 @@
 <?php
 
 //Posso criar um novo arquivo com o fopen
-//w = escrita
+//w = modo de abertura para escrita
+    //abre o arquivo, ou caso não exista tenta criá-lo, e coloca o cursor no início do arquivo para começar a escrever
+    //Por isso que quando executei o código 2 vezes ele não colocou uma string do lado da outra, mas sim sobrescreveu a anterior
 $arquivo = fopen('cursos-php.txt', 'w');
 
 $curso = "PHP Composer: Dependências, Autoload e Publicação";
@@ -13,3 +15,14 @@ $curso = "PHP Composer: Dependências, Autoload e Publicação";
 fwrite($arquivo, $curso);
 
 fclose($arquivo);
+
+//a = modo de abertura apende
+    //Coloca o curso no final do arquivo para adicionar textos depois do que já existe
+$arquivo = fopen('cursos-php.txt', 'a');
+
+$curso = "\nPHP Composer: Curso 2";
+
+fwrite($arquivo, $curso);
+
+fclose($arquivo);
+
