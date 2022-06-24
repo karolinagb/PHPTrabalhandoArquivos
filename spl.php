@@ -1,6 +1,6 @@
 <?php
 
-//spl = Seek to specified line
+//spl = Standard PHP Library
 
 //Não preciso informar o modo de leitura r pois o de leitura já é o padrão
 $arquivoCursos = new SplFileObject('cursos.csv', 'r');
