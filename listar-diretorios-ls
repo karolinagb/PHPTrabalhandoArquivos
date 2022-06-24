@@ -1,0 +1,17 @@
+<?php
+
+//pegando referencia para o diretorio atual:
+// . = representa o diretorio atual
+//Com a função dir já temos uma instancia da classe Directory
+    //Alternativa correta! Um objeto do tipo Directory será retornado e com ele temos acesso a várias 
+    //funcionalidades. Confira mais em
+$diretorioAtual = dir('.');
+
+//exibindo o caminho do diretorio atual
+echo $diretorioAtual->path . PHP_EOL;
+
+//enquanto eu consigo ler algum entrada do diretório atual
+//read() - lê os arquivos do diretorio e retorna false se nao tiver mais nd
+while($arquivo = $diretorioAtual->read()){
+    echo $arquivo . PHP_EOL;
+}
