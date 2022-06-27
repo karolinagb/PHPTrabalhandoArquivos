@@ -9,7 +9,8 @@ $outrosCursos = file('cursos-php.txt');
 $arquivoCsv = fopen('cursos.csv', 'w');
 
 foreach ($meusCursos as  $curso) {
-    $linha = [trim($curso), 'Sim'];
+    //utf8_decode() = tira uma string da tabela do UTF-8 e coloca na tabela ISO8859-1 (é suficiente para excel, por exemplo)
+    $linha = [trim(utf8_decode($curso)), 'Sim'];
 
     //Podemos fazer assim usando o implode
     // fwrite($arquivoCsv, implode(',', $linha));
@@ -23,7 +24,8 @@ foreach ($meusCursos as  $curso) {
 }
 
 foreach ($outrosCursos as  $curso) {
-    $linha = [trim($curso), 'Não'];
+    //salva na tabela que o excel entenda
+    $linha = [trim(utf8_decode($curso)), 'Não'];
 
     // fwrite($arquivoCsv, implode(',', $linha));
 

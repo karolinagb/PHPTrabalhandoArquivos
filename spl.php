@@ -9,7 +9,8 @@ $arquivoCursos = new SplFileObject('cursos.csv', 'r');
 while(!$arquivoCursos->eof()){
     $linha = $arquivoCursos->fgetcsv(';');
 
-    echo $linha[0] . "\t" . $linha[1] . PHP_EOL;
+    //tira da tabela que o excel entende e lê para UTF8
+    echo utf8_encode($linha[0]) . "\t" . $linha[1] . PHP_EOL;
 }
 
 //TimeStamp de quando esse arquivo foi criado
