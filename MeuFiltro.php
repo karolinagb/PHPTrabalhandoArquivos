@@ -29,7 +29,7 @@ class MeuFiltro extends php_user_filter
     //out
     //consumed = número de bytes consumidos do stream que está passando por esse filtro
     //closing = se o stream está sendo fechado ou não
-    public function filter($in, $out, int &$consumed, bool $closing) : int
+    public function filter($in, $out, &$consumed, bool $closing) : int
     {
         //transformar o recurso de entrada em algo manipulável
         //Enquanto nesse recurso eu conseguir pegar um bucket dele

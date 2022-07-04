@@ -1,5 +1,5 @@
-PHP: conceitos, lidando com dados, loops e mais
-Avançando com PHP: Arrays, Strings, Função e Web
+PHP: conceitos, lidando com dados, loops e mais parte 1
+Avançando com PHP: Arrays, Strings, Função e Web parte 1
 PHP: manipulando coleções com Arrays
 PHP Strings: Operações e expressões regulares
 Orientação a Objetos com PHP: Classes, métodos e atributos
